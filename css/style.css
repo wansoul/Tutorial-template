@@ -45,23 +45,19 @@ body{
 	font-weight: 200;
 }
 
-
-.container2{ position: absolute; width: 100%;}
 .help_tip2{
-	position: relative;
+	position: absolute;
 	display: block;
 	width: 230px;
 	top: 60px;
-	margin: 10px auto;
-	padding-left: 66px;
-	background: #fff url(../images/blink_ball.png) no-repeat 16px 10px;
+	right: 20px;
+	background-color: #fff;
 	border-radius: 4px;
 	box-shadow: 1px 1px 6px rgba(21, 21, 21, 0.5);
 }
 .help_tip2 > p{
 	color: #555555;
-	width: 230px;
-	padding: 20px 0;
+	padding: 20px;
 	margin: 0;
 	font-family: helvetica, "helvetica neue";
 	font-weight: 200;
