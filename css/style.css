@@ -1,97 +1,101 @@
-body{ margin: 0; padding: 0; }
-		.container{
-			width: 100%;
-			height: 699px;
-			position: relative;
-			background: url(../images/login-help.png) no-repeat top center;
-		}
-		.help_btn{
-			width: 24px;
-			height: 24px;
-			position: absolute;
-			right: 20px;
-			top: 20px;
-			cursor: pointer;
-			background: url(../images/help_icon_outline.png) no-repeat center;
-		}
-		.help_btn:hover{ background-image: url(../images/help_icon_hover.png) }
-		.active{
-			background-image: url(../images/help_icon.png);
-		}
+body{ 
+	margin: 0; 
+	padding: 0; 
+	background: #EDECEC url(../images/bg-repeat.png) repeat-x top;
+}
+.container{
+	width: 100%;
+	height: 699px;
+	position: relative;
+	background: url(../images/login-help.png) no-repeat top center;
+}
+.help_btn{
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	cursor: pointer;
+	background: url(../images/help_icon_outline.png) no-repeat center;
+}
+.help_btn:hover{ background-image: url(../images/help_icon_hover.png) }
+.active{
+	background-image: url(../images/help_icon.png);
+}
 
-		.help_tip{
-			position: absolute;
-			width: 155px;
-			height: 40px;
-			top: 60px;
-    		right: 36px;
-    		background: url(../images/arrow.png) no-repeat right;
+.help_tip{
+	position: absolute;
+	width: 155px;
+	height: 40px;
+	top: 60px;
+	right: 36px;
+	background: url(../images/arrow.png) no-repeat right;
 
-    		animation-name: levitation;
-			animation-duration: 1.5s;
-			animation-timing-function: ease-in-out;
-			animation-iteration-count: 6;
-		}
-		.help_tip > p{
-			width: 120px;
-			color: #fff;
-			margin: 0;
-			margin-top: 8px;
-			font-family: helvetica, "helvetica neue";
-			font-weight: 200;
-		}
+	animation-name: levitation;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+.help_tip > p{
+	width: 120px;
+	color: #fff;
+	margin: 0;
+	margin-top: 8px;
+	font-family: helvetica, "helvetica neue";
+	font-weight: 200;
+}
 
+.help_tip2{
+	position: absolute;
+	display: block;
+	width: 230px;
+	top: 60px;
+	right: 20px;
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: 1px 1px 6px rgba(21, 21, 21, 0.5);
+}
+.help_tip2 > p{
+	color: #555555;
+	padding: 20px;
+	margin: 0;
+	font-family: helvetica, "helvetica neue";
+	font-weight: 200;
+}
 
-		.container2{ position: absolute; width: 100%;}
-		.help_tip2{
-			position: relative;
-			width: 230px;
-			top: 60px;
-			margin: 10px auto;
-    		padding: 20px;
-    		padding-left: 66px;
-    		background: #fff url(../images/blink_ball.png) no-repeat 16px 10px;
-    		border-radius: 4px;
-		}
-		.help_tip2 > p{
-			color: #555555;
-			margin: 0;
-			font-family: helvetica, "helvetica neue";
-			font-weight: 200;
-		}
+.blink_ball{
+	display: block;
+	position: absolute;
+	top: 260px;
+	left: 60%;
+	width: 24px; 
+	height: 24px;  
+	background-color: #18D794;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	box-shadow: 0 0 0 0 #18D794;
+	cursor: pointer;
+}
 
-		.blink_ball{
-			display: block;
-			position: absolute;
-			top: 260px;
-			left: 66%;
-			width: 24px; 
-			height: 24px;  
-			background-color: #18D794;
-			border-radius: 50%;
-			border: 1px solid #fff;
-			box-shadow: 0 0 0 0 #18D794;
-			cursor: pointer;
-		}
+.blink{
+	animation-name: blink;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
 
-		.blink{
-			animation-name: blink;
-			animation-duration: 1.5s;
-			animation-timing-function: ease-in-out;
-			animation-iteration-count: infinite;
-		}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes blink {
+  0% {box-shadow: 0 0 0 0 #18D794; background-color: #18D794;}
+  50% {box-shadow: 0 0 20px 2px #08F5A2; background-color: #08F5A2;}
+  100% {box-shadow: 0 0 0 0 #18D794; background-color: #18D794;}
+}
+@-webkit-keyframes levitation {
+	0% { top: 60px; }
+	50% { top: 66px; }
+	100% { top: 60px; }
+}
 
-		/* Chrome, Safari, Opera */
-		@-webkit-keyframes blink {
-		  0% {box-shadow: 0 0 0 0 #18D794; background-color: #18D794;}
-		  50% {box-shadow: 0 0 20px 2px #08F5A2; background-color: #08F5A2;}
-		  100% {box-shadow: 0 0 0 0 #18D794; background-color: #18D794;}
-		}
-		@-webkit-keyframes levitation {
-			0% { top: 60px; }
-			50% { top: 66px; }
-			100% { top: 60px; }
-		}
+.pp_details{ display: none; }
+.pp_content{ background: none !important; }
 
-		.pp_details{ display: none; }
-		.pp_content{ background: none !important; }
